@@ -1,4 +1,4 @@
-# Projeto: 🏁 Kopa do Mundo
+# Projeto: 🏁 World_Cup_API
 
 ## Introdução
 API básica, desenvolvida para organizar um campeonato de futebol, onde cada time representará uma seleção nacional. Para manter o mínimo de organização, se implementam algumas validações.
