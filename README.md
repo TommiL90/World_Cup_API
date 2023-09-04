@@ -1,4 +1,37 @@
-# M5 - Kopa do Mundo
+# Projeto: 🏁 Kopa do Mundo
+
+## Introdução
+API básica, desenvolvida para organizar um campeonato de futebol, onde cada time representará uma seleção nacional. Para manter o mínimo de organização, se implementam algumas validações.
+
+O desenvolvimento do projeto será realizado com Python, Django, Rest-Framework
+
+## Rotas
+A seguir, estão listadas as rotas disponíveis na API:
+
+### Cadastrar Seleção
+- **Endpoint**: api/teams/
+- **Verbo HTTP**: POST
+- **Objetivo**: Cadastrar uma nova seleção nacional.
+
+### Listar Seleções
+- **Endpoint**: api/teams/
+- **Verbo HTTP**: GET
+- **Objetivo**: Listar todas as seleções nacionais disponíveis.
+
+### Filtragem de Seleção
+- **Endpoint**: api/teams/<team_id>/
+- **Verbo HTTP**: GET
+- **Objetivo**: Obter detalhes de uma seleção nacional específica com base em seu ID.
+
+### Atualização de Seleção
+- **Endpoint**: api/teams/<team_id>/
+- **Verbo HTTP**: PATCH
+- **Objetivo**: Atualizar informações de uma seleção nacional específica com base em seu ID.
+
+### Deleção de Seleção
+- **Endpoint**: api/teams/<team_id>/
+- **Verbo HTTP**: DELETE
+- **Objetivo**: Excluir uma seleção nacional específica com base em seu ID.
 
 ## Como rodar os testes localmente
  - Verifique se os pacotes pytest e/ou pytest-testdox estão instalados globalmente em seu sistema:
@@ -14,12 +47,14 @@ pip uninstall pytest pytest-testdox -y
 
 ## Próximos passos:
 
-### 1 Crie seu ambiente virtual:
+## 1 Clone e instale o projeto
+
+### 2 Crie seu ambiente virtual:
 ```shell
 python -m venv venv
 ```
 
-### 2 Ative seu venv:
+### 3 Ative seu venv:
 
 ```shell
 # linux:
@@ -29,14 +64,14 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
-### 3 Instalar o pacote <strong>pytest-testdox</strong>:
+### 4 Instalar o pacote <strong>pytest-testdox</strong>:
 
 ```shell
 pip install pytest-testdox pytest-django
 ```
 
 
-### 4 Rodar os testes referentes a cada tarefa isoladamente:
+### 5 Rodar os testes referentes a cada tarefa isoladamente:
 
 Exemplo:
 
@@ -48,51 +83,7 @@ pytest --testdox -vvs tests/tarefas/tarefa_0/
 
 ---
 
-## Execução de testes a partir da tarefa 1
-A partir de agora, para os testes das tarefas 1, 2 e 3, já que começaremos a usar o Django, precisaremos de um arquivo **pytest.ini**, você **DEVE** cria-lo na raiz do projeto, depois de criar esse aquivo você precisa adicionar nele a seguinte configuração:
-
-```python
-[pytest]
-DJANGO_SETTINGS_MODULE = <nome_do_projeto>.settings
-```
-
-**IMPORTANTE**:  Troque <nome_do_projeto> para o nome do pacote onde fica o arquivo settings.py do projeto Django.
-
-- Tarefa 1
+## Observações
+O projeto basico, foi desenvolvido para fines academicos y de aprendizagem.
 
 
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_1/
-```
-
-- Tarefa 2
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_2/
-```
-- Tarefa 3
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_3/
-```
-
----
-
-Você também pode rodar cada método de teste isoladamente:
-
-```shell
-pytest --testdox -vvs caminho/para/o/arquivo/de/teste::NomeDaClasse::nome_do_metodo_de_teste
-```
-
-Exemplo: executar somente "test_can_get_product_by_id".
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_1/test_get_product_by_id.py::TestGetProductById::test_can_get_product_by_id
-```
----
-
-Os testes referentes as funcionalidades extras não são executados por padrão caso você não especifique o caminho até eles. Então caso você queira os executar, rode:
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_3/extra_add_product.py
-```
