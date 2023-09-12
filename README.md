@@ -47,7 +47,7 @@ pip uninstall pytest pytest-testdox -y
 
 ## Próximos passos:
 
-## 1 Clone e instale o projeto
+### 1 Clone e instale o projeto
 
 ### 2 Crie seu ambiente virtual:
 ```shell
